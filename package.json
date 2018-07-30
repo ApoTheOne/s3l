@@ -1,0 +1,17 @@
+{
+  "name": "s3lambda",
+  "version": "1.0.0",
+  "description": "-   Create a lambda function with S3 access.\r -   Set aws credentials via aws cli: `aws configure`",
+  "main": "textReader.js",
+  "dependencies": {
+    "eslint": "^5.2.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.282.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "apo",
+  "license": "ISC"
+}
