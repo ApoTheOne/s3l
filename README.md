@@ -22,7 +22,7 @@
 
 ---
 
--   In Lambda console _configure test events_ by creating a _s3 put_ event and update:
+-   In Lambda console _configure test events_ by creating a _s3 put_ event and update:  
     a) s3 object's _key_ to your file name to be pushed in s3 bucket.   
     b) s3 bucket's _arn_, _name_.   
 
