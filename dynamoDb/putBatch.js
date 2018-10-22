@@ -23,36 +23,36 @@ var params = {
             {
                 PutRequest: {
                     Item: {
-                        UserName: { S: 'Flip' },
-                        OrderId: { N: '1' } //,
-                        //IsActive: { BOOL: true },
-                        //TimeStamp: { S: '10-09-2018 12:00:00' }
+                        UserName: 'Flip',
+                        OrderId: 1,
+                        IsActive: true,
+                        TimeStamp: '10-09-2018 12:00:00'
+                    }
+                }
+            },
+            {
+                PutRequest: {
+                    Item: {
+                        UserName: 'Amma Zon',
+                        OrderId: 3,
+                        IsActive: true,
+                        TimeStamp: '10-09-2018 12:00:00'
+                    }
+                }
+            },
+            {
+                PutRequest: {
+                    Item: {
+                        UserName: 'Cart',
+                        OrderId: 1,
+                        IsActive: true,
+                        TimeStamp: '10-09-2018 12:00:00'
                     }
                 }
             } //,
             // {
-            //     PutRequest: {
-            //         Item: {
-            //             UserName: { S: 'Amma Zon' },
-            //             OrderId: { N: '3' },
-            //             IsActive: { BOOL: true },
-            //             TimeStamp: { S: '10-09-2018 12:00:00' }
-            //         }
-            //     }
-            // },
-            // {
-            //     PutRequest: {
-            //         Item: {
-            //             UserName: { S: 'Flippy Cart' },
-            //             OrderId: { N: '1' },
-            //             IsActive: { BOOL: true },
-            //             TimeStamp: { S: '10-09-2018 12:00:00' }
-            //         }
-            //     }
-            // }
-            // {
             //     DeleteRequest: {
-            //         Key: { HashKey: '1' }
+            //         Key: { UserName: 'Amma Zon' }
             //     }
             // },
             // {
@@ -72,5 +72,5 @@ var params = {
 
 documentClient.batchWrite(params, (err, data) => {
     if (err) console.log('Error: ', err);
-    else console.log(data);
+    else console.log(JSON.stringify(data));
 });
