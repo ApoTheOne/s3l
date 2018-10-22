@@ -21,32 +21,18 @@ var params = {
     RequestItems: {
         UserOrders: {
             Keys: [
-                { UserName: { N: 'Amma Zon' }, OrderId: '1' },
-                { UserName: { N: 'Amma Zon' }, OrderId: '2' },
-                { UserName: { N: 'Amma Zon' }, OrderId: '3' }
-            ] //,
-            //ProjectionExpression: 'KEY_NAME, ATTRIBUTE'
+                { UserName: 'Amma Zon', OrderId: 1 },
+                { UserName: 'Flip', OrderId: 1 },
+                { UserName: 'Amma Zon', OrderId: 3 },
+                { UserName: 'Cart', OrderId: 1 }
+            ],
+            ExpressionAttributeNames: { '#ts': 'TimeStamp' },
+            ProjectionExpression: 'UserName, OrderId, IsActive, #ts'
         }
     }
 };
 
 documentClient.batchGet(params, (err, data) => {
     if (err) console.log(err);
-    else console.log(data);
+    else console.log(JSON.stringify(data));
 });
-
-// var params = {
-//     RequestItems: {
-//         'UserOrders': {
-//             Keys: [
-//                 {
-//                     HashKey: 'haskey',
-//                     NumberRangeKey: 1
-//                 }
-//             ]
-//         },
-//         'Table-2': {
-//             Keys: [{ foo: 'bar' }]
-//         }
-//     }
-// };
