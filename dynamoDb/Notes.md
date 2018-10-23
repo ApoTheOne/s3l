@@ -74,3 +74,9 @@ One way to better distribute writes across a partition key space in DynamoDB is 
 ### Distributing Write Activity Efficiently During Data Upload [Source](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-partition-key-data-upload.html)
 
 Typically, when you load data from other data sources, Amazon DynamoDB partitions your table data on multiple servers. You get better performance if you upload data to all the allocated servers simultaneously.
+
+### GOOD READS:
+
+[Choosing the right dynamodb partition key](https://aws.amazon.com/blogs/database/choosing-the-right-dynamodb-partition-key/)
+
+[Using Sort Keys to Organize Data in Amazon DynamoDB](https://aws.amazon.com/blogs/database/using-sort-keys-to-organize-data-in-amazon-dynamodb/?nc1=b_rp)
